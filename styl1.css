@@ -1,0 +1,137 @@
+body {
+
+  background-color: darkkhaki;
+  font-size: medium;
+  font-family: Calibri, sans-serif;
+  margin: 0 !important;
+}
+
+nav {
+  width: auto;
+  padding: 0.2em 1em;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: darkolivegreen;
+  background-color: orange;
+  list-style-type: none;
+  border: 4px dashed;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav {
+  float: left;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em 0.5em;
+  margin-top: 0;
+  border-right: 2px dashed;
+  border-left: 2px dashed;
+  background-color: orange;
+  min-width: 13% ;
+  height:1em;
+}
+
+#top {
+  margin-left: auto;
+  margin-right: auto;	
+	
+}
+
+.nav:hover {
+	background-color:darkorange;
+	cursor: pointer;
+}
+
+#logo {
+ padding: 1em 0;
+ border: 0px;
+ margin-right: auto;
+ margin-left: auto;
+}
+
+#main {
+ width: 70%;
+ padding-right: 0em;
+ padding-left: 2em;
+ padding-top: 2em;
+ padding-bottom: 4em;
+ margin-right: auto;
+ margin-left: auto;
+ margin-top: 1em;
+ margin-bottom: 1em;
+ color: darkolivegreen;
+ text-align: justify;
+ border: 4px dashed;
+}
+
+#maincontent {
+  float: left;
+  width: auto;
+  max-width: 70%;
+  
+}
+
+aside {
+  float: right;
+  padding: 1em;
+  border-top: 4px dashed;
+  border-bottom: 4px dashed;
+  border-left: 4px dashed;
+  color: darkolivegreen;
+  background-color: orange;
+  font-weight: bold;
+  width: 15em;
+  
+}
+	
+footer {
+  clear: both;
+  text-align: center;
+  color: darkolivegreen;
+}
+
+img {
+	max-width: 100%;
+	border: 2px dashed;
+}
+
+h1 {
+  color: orange;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4.5em;
+  text-align: center;
+  text-shadow: .05em -.05em 0.15em black,
+               .1em .1em 0.15em gray;
+}
+
+h2 {
+  word-spacing: 1.5em;
+  letter-spacing: 0.5em;
+  text-align: center;
+  color: darkolivegreen;
+}
+p {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: darkolivegreen; 
+}
+a:hover {
+  color: black;
+}
+a:active{
+  color: orange;
+}
+
+
+.error {
+	color: red !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
