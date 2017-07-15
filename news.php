@@ -22,7 +22,7 @@ session_start();
 	<div class="nav"><a href="index.php">o nas</a></div>
     <div class="nav"><a href="news.php">co nowego?</a></div>
     <div class="nav"><a href="sklep.php">sklep</a></div>
-	<div class="nav"><a href="kontakt.php">kontakt</a></div>
+	<div class="nav"><a href="kontakt.html">kontakt</a></div>
     <?php
 	if (isset($_SESSION['zalogowany'])&&$_SESSION['zalogowany']==true)
 	{
@@ -53,16 +53,7 @@ session_start();
  
  <div id="main">
 	<div id="maincontent">
-		<p>Witamy na stronie naszej pasieki. Dowiecie się z niej, kim jesteśmy, jak powstaliśmy i dlaczego pasjonuje nas pszczelarstwo. Zapraszamy również do naszego małego sklepiku pszczelarskiego, gdzie znajdziecie nasze produkty i wszelkie akcesoria przydatne w małych pasiekach, jak również pszczele gadżety i upominki.</p>
-		<img src="img/ul.png" alt="ul stojący na zielonej trawie"/>
-		<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel aliquam nunc, a mollis tortor. Duis ut bibendum urna. Vivamus iaculis velit lacus, a feugiat justo vehicula non. Aliquam vitae accumsan magna. Sed blandit porta urna vehicula faucibus. Phasellus id tristique libero. Fusce vestibulum id purus a egestas. Aliquam et augue ullamcorper, luctus quam id, bibendum eros. Praesent in lorem sit amet mauris sollicitudin congue. Maecenas ultricies risus eget mi maximus placerat. Donec dapibus quam sit amet facilisis aliquam. Nam bibendum diam quis dui commodo, nec efficitur nisi cursus. Nunc facilisis volutpat nibh in accumsan.
-
-		Donec convallis hendrerit mauris quis eleifend. Nulla facilisi. Nullam euismod magna at efficitur blandit. Praesent vitae tempor nisl. Curabitur malesuada sit amet arcu a dapibus. Maecenas ante ipsum, sollicitudin quis enim a, luctus egestas felis. Vivamus elementum placerat tellus, sed commodo metus tempor in. Mauris facilisis consequat elit, quis tincidunt augue pulvinar sed. Sed gravida semper nisl, eu eleifend neque ornare eget. Etiam mattis tellus at metus laoreet, at elementum neque pharetra. Morbi eleifend, metus ut dignissim dignissim, nulla nisl placerat urna, nec vulputate dui leo at sapien. In hac habitasse platea dictumst. Phasellus tempus nisi eu venenatis tempor.
-
-		Vestibulum vel auctor nisi, vitae scelerisque metus. Integer eget luctus odio. Integer tempor fringilla eros, vel rhoncus ligula blandit a. Vivamus porttitor odio ac dui aliquet sagittis. Nullam mattis vehicula risus. Duis sed nisi vel lorem molestie hendrerit vitae auctor augue. Suspendisse a mi tincidunt, commodo enim vitae, cursus diam. Nullam id dapibus dolor, non consectetur nulla. Donec porta vulputate metus. Nulla nulla velit, condimentum non consectetur vitae, feugiat sit amet turpis. Vivamus ac felis sed nunc finibus blandit non sed lacus. Nam consectetur orci eu magna convallis malesuada. Cras et accumsan enim, ac sodales ante. Ut eu odio consectetur, pretium ipsum ac, ullamcorper orci. Aliquam in dolor vel leo ullamcorper accumsan. Phasellus interdum turpis sed ipsum gravida congue.
-		</p>
-		<p>Darz miód!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel aliquam nunc, a mollis tortor. Duis ut bibendum urna. Vivamus iaculis velit lacus, a feugiat justo vehicula non. Aliquam vitae accumsan magna. Sed blandit porta urna vehicula faucibus. Phasellus id tristique libero. Fusce vestibulum id purus a egestas. Aliquam et augue ullamcorper, luctus quam id, bibendum eros. Praesent in lorem sit amet mauris sollicitudin congue. Maecenas ultricies risus eget mi maximus placerat. Donec dapibus quam sit amet facilisis aliquam. Nam bibendum diam quis dui commodo, nec efficitur nisi cursus. Nunc facilisis volutpat nibh in accumsan.</p>
 	</div>
 	<aside>
 		<h3>Już niedługo miodobranie!</h3>

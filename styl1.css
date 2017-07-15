@@ -41,6 +41,10 @@ nav {
 	
 }
 
+#log {
+  color: black; 	
+}
+
 .nav:hover {
 	background-color:darkorange;
 	cursor: pointer;
@@ -72,7 +76,6 @@ nav {
   float: left;
   width: auto;
   max-width: 70%;
-  
 }
 
 aside {
@@ -84,7 +87,8 @@ aside {
   color: darkolivegreen;
   background-color: orange;
   font-weight: bold;
-  width: 15em;
+  width: 20em;
+  
   
 }
 	
@@ -129,9 +133,74 @@ a:active{
   color: orange;
 }
 
+#basket {
+  background: url('img/mono-basket.png');
+  background-size: 6em 6em;
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
+  background-color: orange;
+  
+}
+.zam {
+	padding-left: 0.5em;
+	padding-right:2em;
+	float: left;
+}
+
+.zamowienie
+{
+	padding: 0.5em;
+	margin-top: 2em;
+	background-color: orange;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.s {
+	padding-left: 0.5em;
+	width: 20%;
+	font-size:0.8em;
+	float: left;
+}
+
+.szczegoly {
+	border-bottom-style: dashed;
+	border-width:0.5px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .error {
 	color: red !important;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+	.button {
+    background-color: white;
+    border: 1px solid #bbbbbb;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -moz-box-shadow: 2px 2px 3px #cccccc;
+    -webkit-box-shadow: 2px 2px 3px #cccccc;
+    box-shadow: 2px 2px 3px #cccccc;
+    text-decoration: none;
+    color: black;
+    font-family: Calibri, sans-serif;
+    font-size: 18px;
+    outline: none;
+    padding: 3px 10px;
+}
+ 
+.button:active {
+    -moz-box-shadow: 2px 2px 3px #cccccc inset;
+    -webkit-box-shadow: 2px 2px 3px #cccccc inset;
+    box-shadow: 2px 2px 3px #cccccc inset;
+}
+
+table {
+	font-size: 0.8em;
+	margin-left: 0%;
+	padding-left: 0;
 }

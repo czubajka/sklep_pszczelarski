@@ -1,15 +1,48 @@
 <?php
-	session_start();
-	
-	if (isset($_SESSION['zalogowany'])&& $_SESSION['zalogowany']==true)
+session_start();
+require "funkcje_sklep.php";
+
+$_SESSION['url'] = "sklep.php";
+
+if(!isset($_SESSION['suma'])) 
+{
+	$_SESSION['suma']=0.0;
+}
+
+if(!isset($_SESSION['produkty_ilosc']))
+{
+	$_SESSION['produkty_ilosc']=0;
+}
+
+if(!isset($_SESSION['koszyk']))
+{
+	$_SESSION['koszyk'] = array();
+}
+// oosługa koszyka
+
+if(isset($_POST['zapisz']))
+{
+	foreach($_SESSION['koszyk'] as $id_mp => $ilosc)
 	{
-		header('Location: user_start.php');
-		exit();
+		if($_POST[$id_mp]=='0')
+		{
+			unset($_SESSION['koszyk'][$id_mp]);
+		}
+		else
+		{
+			$_SESSION['koszyk'][$id_mp]=$_POST[$id_mp];
+		}
 	}
+	$_SESSION['suma'] = policz_sume($_SESSION['koszyk']);
+	$_SESSION['produkty_ilosc'] = policz_produkty($_SESSION['koszyk']);
+	
+}
 ?>
-<!DOCTYPE HTML>
+
+
+<!DOCTYPE html>
 <html lang="pl-PL">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="author" content="Karolina Nędza-Sikoniowska">
     <title>Pasieka Miodek Uli</title>
@@ -19,10 +52,11 @@
     <link rel="icon" href="img/favicon-bee.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 	<link rel="stylesheet" href="styl1.css" type="text/css">
-    <meta http-equiv="creation-date" content="Mon, 06 May 2017 21:29:02 GMT">
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-</head>
-<body>
+    <meta http-equiv="creation-date" content="Mon, 17 June 2017 21:29:02 GMT">
+  </head>
+ 
+ <body>
+ 
 <div id="top"><nav>
 	<div class="nav"><a href="index.php">o nas</a></div>
     <div class="nav"><a href="news.php">co nowego?</a></div>
@@ -53,31 +87,53 @@
  
  <div id="logo">
 	<h1>Pasieka MIODEK ULI</h1>
-	<h2>Zaloguj się na swoje konto!</h2>
+	<h2>sklep internetowy</h2>
  </div>
-	<div id="main">
-		<div id="maincontent">
-			<p>Zapraszamy do rejestracji w naszym portalu.</p>
-			<form action="log_in.php" method="post">
-				<fieldset>
-					<p>Login <input type="text" name="login"/></p>
-					<p>Hasło <input type="password" name="pswd"/></p>
-					<p><input type="submit" value="Zaloguj"/></p>
-				</fieldset>
-			</form>
+ 
+ <div id="main">
+	<div id="maincontent">
+		<h3>Witamy w naszym sklepie z miodami! Poniżej znajdziecie aktualną ofertę miodów. Zapraszamy!</h3>
+		<p>
+<p>Poniżej znajduje się lista obecnie oferowanych przez nas miodów. Po więcej szczegółów, kliknij na nazwę interesującego cię miodu.</p>
+
+	<br><br>
 	
 <?php
-	if(isset($_SESSION['blad_logowania'])) 
-		echo $_SESSION['blad_logowania'];
+//pobieranie typów miodów z bazy
+$tablica_miodow = pobierz_typy_miodow();
+//wyświetlanie linków do miodów
+wyswietl_miody($tablica_miodow);
+
+
 ?>
-	
-	<p><small>Nie mam jeszcze konta, ale chciałbym/chciałabym je założyć.</small></p>
-	<p><a href="register.php">kliknij tutaj aby się zarejestrować</a></p>
+		</p>
 	</div>
-	<div style="clear: both"></div>
-</div>
-<footer>
+	<aside id="basket">
+		<div>
+		<h3>Twój koszyk:</h3>
+<?php 
+if(($_SESSION['koszyk']) && (array_count_values($_SESSION['koszyk'])))
+{
+	pokaz_koszyk($_SESSION['koszyk']);
+}
+else
+{
+	echo "<p>Koszyk jest pusty</p>";
+}
+$akcja = "sklep.php";
+
+przycisk("do_kasy.php", "Idz do kasy");
+
+?>
+		
+		</div>
+	</aside>
+	<div style="clear: both;"></div>
+ </div>
+ 
+ <footer>
 	 <small>Wszystkie prawa zastrzeżone &copy;2017, <a href="mailto:karolcia999@gmail.com">Karolina Nędza-Sikoniowska</a></small>
-</footer>
-</body>
-</html>
+ </footer>
+ 
+ </body>
+ </html>
